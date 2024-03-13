@@ -1,5 +1,9 @@
 import time
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 from .mqtt_client_connection import MqttClientConnection
 
