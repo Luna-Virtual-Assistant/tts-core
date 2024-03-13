@@ -2,7 +2,7 @@ import time
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 
 from .mqtt_client_connection import MqttClientConnection

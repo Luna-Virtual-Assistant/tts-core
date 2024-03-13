@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt
 from datetime import datetime
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 
 

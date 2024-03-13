@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 from app.tts import tts
 
-load_dotenv()
+load_dotenv(override=True)
 
 
 REQ_TOPIC = os.getenv("REQ_TOPIC")
@@ -24,5 +24,5 @@ def on_subscribe(client, userdata, mid, granted_qos):
 def on_message(client, userdata, message):
     print(f"[{datetime.now().strftime('%Y-%m-%d - %H:%M:%S')}] Received a message on topic {message.topic}")
     tts.speak(message.payload.decode())
-    publish(f"Said: message.payload.decode()")    
+    publish(f"Said: {message.payload.decode()}")    
     
